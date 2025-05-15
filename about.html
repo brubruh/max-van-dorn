@@ -12,58 +12,52 @@
         <section class="showcase">
             <header>
                 <h2 class="logo">Maxim Van Dorn</h2>
-                <div class="toggle"></div>
+                <button class="toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </header>
             <div class="overlay"></div>
             <div class="text">
                 <h2>About Me</h2>
-                <p>I am a computer science major at the Universirty of Vermont. My interests lie in areas
+                <p>I am a computer science major at the University of Vermont. My interests lie in areas
                     that include ethical computing, modern/creative problem solving, and understanding as
-                    much as I can about everything.<p>
-                <a href="#">Learn More</a>
+                    much as I can about everything.</p>
+                <a href="projects.html">Learn More</a>
             </div>
-            <div class ="text">
+            <div class="text">
                 <h3>What I do</h3>
                 <p>I am trying to figure out a niche as some people say. This process of finding 
-                    my creative interests has proven to be an interesting adventure. There is a lot that goes in to finding 
+                    my creative interests has proven to be an interesting adventure. There is a lot that goes into finding 
                     out who you want to be and who you are. I want to be able to be a good inspiration to others,
                     and give others a reason to keep moving forward. Conveying this message without actually saying 
-                    it can be difficult though, haha. 
-                </p>
+                    it can be difficult though, haha.</p>
             </div>
             <ul class="social">
-                <li><a href="https://www.instagram.com/max.v0_/" target="_blank"><img src="images/instagram.png"width="200"></a></li>
+                <li><a href="https://www.instagram.com/max.v0_/" target="_blank"><img src="images/instagram.png" width="200" alt="Instagram"></a></li>
             </ul>
         </section>
+        
         <div class="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="#">Resume</a></li>
-                <li><a href="#">Github</a></li>
+                <li><a href="https://github.com/brubruh" target="_blank">Github</a></li>
                 <li><a href="https://www.linkedin.com/in/maxim-van-dorn-02795130a/" target="_blank">LinkedIn</a></li>
             </ul>
         </div>
-        
-        <div class="menu">
-                        <ul>
-                                <li><a href="https://mvandorn.w3.uvm.edu/hello/index.php">Home</a></li>
-                                <li><a href="https://mvandorn.w3.uvm.edu/hello/about.php">About</a></li>
-                                <li><a href="#">Resume</a></li>
-                                <li><a href="#">Github</a></li>
-                                <li><a href="https://www.linkedin.com/in/maxim-van-dorn-02795130a/" target="_blank">LinkedIn</a></li>
-                        </ul>
-                </div>
 
-                <script>
-                        const menuToggle = document.querySelector('.toggle')
-                        const showcase = document.querySelector('.showcase')
+        <script>
+            const menuToggle = document.querySelector('.toggle');
+            const showcase = document.querySelector('.showcase');
 
-                        menuToggle.addEventListener('click', () => {
-                                menuToggle.classList.toggle('active')
-                                showcase.classList.toggle('active')
-                        })
-                </script>
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                showcase.classList.toggle('active');
+            });
+        </script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="button.js"></script>
     </div>

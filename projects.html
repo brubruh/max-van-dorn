@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <div class="page active">
+        <section class="showcase">
+            <header>
+                <h2 class="logo">Maxim Van Dorn</h2>
+                <button class="toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <div class="overlay"></div>
+            <div class="text">
+                <h2>My Projects</h2>
+                <p>Here are some of the projects I’ve worked on. Scroll down to explore each project!</p>
+            </div>
+        </section>
+
+        <div class="projects-container">
+            <article class="project">
+                <h3>Portfolio Website</h3>
+                <p>A website created for a up and coming company, Kiau Tech. This project required a more abstract take on websites where it was important to include a botanical design. This project is still a work in progress!</p>
+                <a href="https://kiau.tech" target="_blank">View Project</a>
+            </article>
+
+            <!-- <article class="project">
+                <h3>Blog Template</h3>
+                <p>A simple blog template built with HTML and CSS.</p>
+                <a href="blog.html" target="_blank">View Project</a>
+            </article>
+
+            <article class="project">
+                <h3>Landing Page</h3>
+                <p>A responsive landing page for a fictional product.</p>
+                <a href="landing-page.html" target="_blank">View Project</a>
+            </article> -->
+        </div>
+
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="https://github.com/brubruh" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/maxim-van-dorn-02795130a/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.toggle');
+            const showcase = document.querySelector('.showcase');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                showcase.classList.toggle('active');
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -5,6 +5,11 @@
         padding: 0;
         font-family: 'Spline Sans Mono', sans-serif;
 }
+/* Ensure the body and page allow scrolling */
+body, .page {
+    height: auto;
+    overflow-y: auto;
+}
 header
 {
   position: absolute;
@@ -60,7 +65,7 @@ button.toggle.active span:nth-child(3) {
 
 .showcase
 {
-  position: absolute;
+  position: relative;
   right: 0;
   width: 100%;
   min-height: 100vh;
@@ -161,19 +166,23 @@ button.toggle.active span:nth-child(3) {
 }
 .social li
 {
+  color: white;
   list-style: none;
 }
 .social li a
 {
   display: inline-block;
   margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
   transition: 0.5s;
+  color: white
 }
 .social li a:hover
 {
   transform: scale(0.5) translateY(-15px);
+}
+
+.social li a:visited {
+  color: white !important;
 }
 .menu
 {
@@ -244,4 +253,58 @@ button.toggle.active span:nth-child(3) {
 
 .controls button:hover {
   background-color: #03a9f4;
+}
+
+/* Make the projects container scrollable */
+.projects-container {
+    background: black;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px); /* Adjust height to fit within the viewport */
+    position: relative;
+    z-index: 10; /* Ensure it appears above the overlay */
+}
+
+/* Style individual projects */
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.project a {
+    display: inline-block;
+    font-size: 1em;
+    background: #03a9f4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.project a:hover {
+    background: #0288d1;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
