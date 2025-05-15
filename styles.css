@@ -320,7 +320,7 @@ button.toggle.active span:nth-child(3) {
 
     /* Adjust header layout */
     header {
-      position: relative;
+        position: relative; /* Allow dynamic positioning */
         display: flex;
         flex-direction: column; /* Stack logo and menu button vertically */
         align-items: center;
@@ -334,17 +334,18 @@ button.toggle.active span:nth-child(3) {
     }
 
     button.toggle {
-        margin-top: 10px; /* Add spacing below the logo */
-        width: 40px;
-        height: 40px;
+        display: none;
+
     }
 
     /* Adjust showcase section */
     .showcase {
+        position: relative; /* Allow dynamic positioning */
         padding: 20px; /* Reduce padding for smaller screens */
         flex-direction: column; /* Stack content vertically */
         text-align: center; /* Center-align text */
         justify-content: center;
+        margin-bottom: 20px; /* Add spacing below the showcase */
     }
 
     .showcase video {
@@ -376,14 +377,14 @@ button.toggle.active span:nth-child(3) {
 
     /* Adjust controls section */
     .controls {
-      position: relative;
+        position: relative; /* Allow dynamic positioning */
         margin: 20px auto; /* Add spacing between text and buttons */
         display: flex;
         flex-direction: column; /* Stack buttons vertically */
         gap: 10px; /* Add spacing between buttons */
-        align-items: center;
+        align-items: center; /* Center-align buttons horizontally */
+        top: auto;
         left: auto;
-        top: 10px;
     }
 
     .controls button {
@@ -391,14 +392,9 @@ button.toggle.active span:nth-child(3) {
         padding: 10px; /* Adjust button padding */
     }
 
-    /* Hide the navigation toggle button */
-    button.toggle {
-        display: none; /* Hide the toggle button */
-    }
-
     /* Move the menu to the bottom */
     .menu {
-        position: static; /* Remove absolute positioning */
+        position: relative; /* Allow dynamic positioning */
         text-align: center; /* Center-align the menu */
         padding: 10px 0;
         background: #111; /* Optional: Add a background color for contrast */
@@ -406,6 +402,7 @@ button.toggle.active span:nth-child(3) {
         display: flex;
         align-items: center;
         width: 100%; /* Full width */
+        margin-top: 20px; /* Add spacing above the menu */
     }
 
     .menu ul {
@@ -452,7 +449,8 @@ button.toggle.active span:nth-child(3) {
 
     /* Adjust social links */
     .social {
-        bottom: 10px; /* Move social links closer to the bottom */
+        position: relative; /* Allow dynamic positioning */
+        margin-top: 20px; /* Add spacing above social links */
         flex-direction: column; /* Stack social links vertically */
         gap: 10px;
     }
