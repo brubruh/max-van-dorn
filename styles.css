@@ -376,13 +376,14 @@ button.toggle.active span:nth-child(3) {
 
     /* Adjust controls section */
     .controls {
-      position: absolute;
+      position: relative;
         margin: 20px auto; /* Add spacing between text and buttons */
         display: flex;
         flex-direction: column; /* Stack buttons vertically */
         gap: 10px; /* Add spacing between buttons */
         align-items: center;
         left: auto;
+        top: 10px;
     }
 
     .controls button {
