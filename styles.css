@@ -308,3 +308,153 @@ button.toggle.active span:nth-child(3) {
     transform: translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* General body and page adjustments */
+    body, .page {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    /* Adjust header layout */
+    header {
+      position: relative;
+        display: flex;
+        flex-direction: column; /* Stack logo and menu button vertically */
+        align-items: center;
+        padding: 10px 20px; /* Reduce padding */
+        text-align: center; /* Center-align text */
+    }
+
+    header .logo {
+        font-size: 1.5em; /* Reduce logo font size */
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
+
+    button.toggle {
+        margin-top: 10px; /* Add spacing below the logo */
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Adjust showcase section */
+    .showcase {
+        padding: 20px; /* Reduce padding for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center-align text */
+        justify-content: center;
+    }
+
+    .showcase video {
+        width: 100%; /* Make the video responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .showcase .text {
+        margin-top: 20px; /* Add spacing between video and text */
+    }
+
+    .showcase .text h2 {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    .showcase .text h3 {
+        font-size: 1.5em; /* Reduce subheading size */
+    }
+
+    .showcase .text p {
+        font-size: 1em; /* Adjust paragraph font size */
+        margin: 10px 0; /* Add spacing around the paragraph */
+    }
+
+    .showcase .text a {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 8px 20px; /* Reduce button padding */
+    }
+
+    /* Adjust controls section */
+    .controls {
+      position: absolute;
+        margin-top: 20px; /* Add spacing between text and buttons */
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    .controls button {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 10px; /* Adjust button padding */
+    }
+
+    /* Hide the navigation toggle button */
+    button.toggle {
+        display: none; /* Hide the toggle button */
+    }
+
+    /* Move the menu to the bottom */
+    .menu {
+        position: static; /* Remove absolute positioning */
+        text-align: center; /* Center-align the menu */
+        padding: 10px 0;
+        background: #111; /* Optional: Add a background color for contrast */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 100%; /* Full width */
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Add spacing between menu items */
+    }
+
+    .menu ul li a {
+        font-size: 1em; /* Adjust font size for readability */
+        color: #fff; /* Ensure the text is visible */
+        text-decoration: none;
+        padding: 10px; /* Add padding for better touch targets */
+        display: block;
+    }
+
+    .menu ul li a:hover {
+        color: #03a9f4; /* Optional: Add a hover effect */
+    }
+
+    /* Adjust projects container */
+    .projects-container {
+        padding: 20px; /* Reduce padding for smaller screens */
+        gap: 20px; /* Reduce gap between projects */
+    }
+
+    /* Adjust individual project cards */
+    .project {
+        padding: 15px; /* Reduce padding inside project cards */
+    }
+
+    .project h3 {
+        font-size: 1.5em; /* Reduce heading size */
+    }
+
+    .project p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
+    .project a {
+        font-size: 0.9em; /* Adjust button font size */
+        padding: 8px 15px; /* Reduce button padding */
+    }
+
+    /* Adjust social links */
+    .social {
+        bottom: 10px; /* Move social links closer to the bottom */
+        flex-direction: column; /* Stack social links vertically */
+        gap: 10px;
+    }
+
+    .social li a {
+        font-size: 0.9em; /* Adjust font size for social links */
+    }
+}
