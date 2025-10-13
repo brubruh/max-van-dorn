@@ -3,92 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxim Van Dorn - Resume</title>
+    <title>Resume - Maxim Van Dorn</title>
     <link href="styles.css" rel="stylesheet">
-    <style>
-        /* Print-specific styles */
-        @media print {
-            .no-print { display: none !important; }
-            body { background: white !important; color: black !important; }
-            .page { box-shadow: none !important; }
-        }
-        
-        .resume-page {
-            max-width: 8.5in;
-            margin: 0 auto;
-            padding: 1in;
-            background: white;
-            color: black;
-            line-height: 1.4;
-        }
-        
-        .resume-header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .resume-section {
-            margin-bottom: 25px;
-        }
-        
-        .resume-section h3 {
-            color: #333;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <meta name="description" content="Maxim Van Dorn's professional resume - CS Senior passionate about ethical computing">
 </head>
 <body>
-    <div class="resume-page">
-        <div class="no-print" style="text-align: center; margin-bottom: 20px;">
-            <button onclick="window.print()" class="btn btn-primary">Print/Save as PDF</button>
-            <a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
-        </div>
-        
-        <header class="resume-header">
-            <h1>Maxim Van Dorn</h1>
-            <p>Creative Developer | Computer Science Student</p>
-            <p>GitHub: github.com/brubruh | LinkedIn: linkedin.com/in/maxim-van-dorn-02795130a</p>
-        </header>
-        
-        <section class="resume-section">
-            <h3>Education</h3>
-            <div>
-                <strong>Bachelor of Science in Computer Science</strong><br>
-                University of Vermont | Expected Graduation: 2024<br>
-                Focus: Ethical Computing, Software Engineering, Creative Problem-Solving
-            </div>
-        </section>
-        
-        <section class="resume-section">
-            <h3>Technical Skills</h3>
-            <ul>
-                <li><strong>Programming Languages:</strong> JavaScript, Python, Java, C++, HTML/CSS</li>
-                <li><strong>Frameworks & Tools:</strong> React, Node.js, Git, MongoDB, Express.js</li>
-                <li><strong>Concepts:</strong> Agile Development, UI/UX Design, Database Design, API Development</li>
-            </ul>
-        </section>
-        
-        <section class="resume-section">
-            <h3>Projects</h3>
-            <div>
-                <strong>Kiau Tech Website</strong> | <em>In Progress</em><br>
-                Developed a creative website with botanical design elements using HTML, CSS, and JavaScript.<br><br>
-                
-                <strong>Portfolio Website</strong> | <em>Completed</em><br>
-                Built a responsive, modern portfolio showcasing technical skills and creative design sensibility.
-            </div>
-        </section>
-        
-        <section class="resume-section">
-            <h3>Philosophy & Interests</h3>
-            <p>Passionate about ethical computing and using technology to create positive change. 
-               Interested in the intersection of technology and design, with a focus on user experience 
-               and creative problem-solving approaches.</p>
-        </section>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images/explore.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+    
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+    
+    <!-- Color Mask -->
+    <div class="color-mask"></div>
+
+    <div class="page">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-brand">
+                <h1 class="logo">Maxim Van Dorn</h1>
+                <span class="tagline">Creative Developer</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Side Menu -->
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-content">
+                <div class="menu-nav">
+                    <a href="index.html" class="menu-link">Home</a>
+                    <a href="about.html" class="menu-link">About</a>
+                    <a href="projects.html" class="menu-link">Projects</a>
+                    <a href="resume.html" class="menu-link active">Resume</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Content -->
+        <main class="content-section">
+            <div class="container">
+                <h1 class="section-title">Resume</h1>
+                
+                <div class="section-content text-center mb-xl">
+                    <p>Computer Science Student | University of Vermont | Major GPA: 3.50 | Expected Graduation: May 2026</p>
+                    <p class="text-sm" style="margin-top: var(--spacing-sm); opacity: 0.8;">
+                        maximvandorn@gmail.com | 917-558-0394 | 
+                        <a href="https://www.linkedin.com/in/maxim-van-dorn-02795130a/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color);">LinkedIn</a>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="documents/Maxim_Van_Dorn_Resume.pdf" download="Maxim_Van_Dorn_Resume.pdf" class="btn btn-primary">📄 Download PDF</a>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="resume-section">
+                    <h2>Education</h2>
+                    <div class="resume-item">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <div class="meta">University of Vermont (UVM), Burlington, VT | August 2022 – May 2026</div>
+                        <p><strong>Major GPA:</strong> 3.50</p>
+                        <p><strong>Relevant Coursework:</strong> Data Privacy, Database Systems, Data Science, Data Algorithms & Design, Computability and Complexity, Discrete Structures</p>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="resume-section">
+                    <h2>Skills & Interests</h2>
+                    <div class="resume-item">
+                        <h3>Technical Skills</h3>
+                        <p><strong>Programming Languages:</strong> C++, Java, SQL, Python, R, HTML, JavaScript</p>
+                        <p><strong>Tools & Technologies:</strong> Linux, Excel, LaTeX, D3, JGrasp, API Handling, GitHub</p>
+                        <p><strong>Hardware & Systems:</strong> Built Personal Desktop, Personal 3D Printer, Raspberry Pi, Breadboards</p>
+                    </div>
+                    <div class="resume-item">
+                        <h3>Interests</h3>
+                        <p>Intriguing Designs, Photography, Drawing, Useful Data and Data Displays, Boston Celtics</p>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="resume-section">
+                    <h2>Experience</h2>
+                    <div class="resume-item">
+                        <h3>Web Developer</h3>
+                        <div class="meta">Kiau Technologies | November 2024 – Present</div>
+                        <p>Independent web developer responsible for the website development of an emerging company specializing in regenerative agriculture, located in Colorado.</p>
+                        <ul>
+                            <li>Taught myself to use many different Java/Python libraries to make an extensive website, such as D3, JGrasp, API Handling, and more</li>
+                            <li>Gaining experience related to the process of creating websites and displaying important information, input handling, accessibility problems, and GitHub staging</li>
+                            <li>Learning to work with other departments to display their success and focuses, making sure the company is portrayed in the best way as applications to grants roll out</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h3>Python Course Teaching Assistant</h3>
+                        <div class="meta">University of Vermont | Fall 2024</div>
+                        <p>Supervised over thirty undergraduate students in the execution of Python projects, addressing software bugs, and advancing their programming proficiency.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h3>Lead Code Engineer</h3>
+                        <div class="meta">Smart Waste Bin Project (Team of 3) | Fall 2024</div>
+                        <p>Worked as the lead code engineer in a project for school. We learned a lot about the process of working with terminals, file management, and data validation.</p>
+                        <ul>
+                            <li>Hands on project that involved using custom 3D printed parts, a Raspberry Pi, and bread boards to create a smart waste bin that displays the amount of Carbon Dioxide prevented from entering the atmosphere</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="resume-section">
+                    <h2>Projects</h2>
+                    <div class="resume-item">
+                        <h3>Clash Royale API Tester</h3>
+                        <div class="meta">At Home Project (Python) | Fall 2025</div>
+                        <p>A small project to test and see how API keys work, and how pulling, cleaning, and displaying live data works.</p>
+                        <ul>
+                            <li>Displays my friends Clash Royale stats, like most recent games Win/Loss ratio, most used cards, most common deck lost to, and graphical data</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h3>Personal Portfolio Website</h3>
+                        <div class="meta">2024 - Present</div>
+                        <p>Built a modern, responsive portfolio website using HTML5, CSS3, and JavaScript with dynamic content loading, interactive video background, and filter controls.</p>
+                    </div>
+                </div>
+
+                <!-- Extracurricular Activities Section -->
+                <div class="resume-section">
+                    <h2>Extracurricular Activities</h2>
+                    <div class="resume-item">
+                        <h3>UVM CS Crew - Attendee</h3>
+                        <div class="meta">Spring 2024 – Fall 2025</div>
+                        <p>Managed by students, attend every week. Guest speakers come in to talk about what they do, or students give presentations about CS News/Developments.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Control Panel Toggle -->
+        <div class="control-toggle" id="controlToggle" title="Toggle Controls">
+            ⚙️
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel" id="controlPanel">
+            <div class="control-group">
+                <label class="control-label">Video Filters</label>
+                <div class="control-buttons">
+                    <button class="control-btn active" data-filter="none">None</button>
+                    <button class="control-btn" data-filter="invert">Invert</button>
+                    <button class="control-btn" data-filter="grayscale">Greyscale</button>
+                    <button class="control-btn" data-filter="sepia">Sepia</button>
+                    <button class="control-btn" data-filter="contrast">Contrast</button>
+                    <button class="control-btn" data-filter="brightness">Brightness</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Background Blur</label>
+                <div class="control-buttons">
+                    <button class="control-btn blur-btn" data-blur="off">Off</button>
+                    <button class="control-btn blur-btn" data-blur="on">On</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Mask Color</label>
+                <input type="color" class="color-picker" id="colorPicker" value="#ffffff">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation functionality
+        const navToggle = document.querySelector('.nav-toggle');
+        const sideMenu = document.querySelector('.side-menu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            sideMenu.classList.toggle('active');
+        });
+
+        // Control panel toggle functionality
+        const controlToggle = document.getElementById('controlToggle');
+        const controlPanel = document.getElementById('controlPanel');
+
+        controlToggle.addEventListener('click', () => {
+            controlPanel.classList.toggle('active');
+        });
+
+        // Settings persistence
+        const VideoSettings = {
+            load() {
+                return {
+                    filter: localStorage.getItem('videoFilter') || 'none',
+                    blur: localStorage.getItem('videoBlur') || 'off',
+                    maskColor: localStorage.getItem('maskColor') || '#ffffff'
+                };
+            },
+            
+            save(settings) {
+                localStorage.setItem('videoFilter', settings.filter);
+                localStorage.setItem('videoBlur', settings.blur);
+                localStorage.setItem('maskColor', settings.maskColor);
+            }
+        };
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const blurButtons = document.querySelectorAll('[data-blur]');
+        const videoBackground = document.querySelector('.video-background');
+        const colorPicker = document.getElementById('colorPicker');
+        const colorMask = document.querySelector('.color-mask');
+
+        // Load saved settings
+        const savedSettings = VideoSettings.load();
+
+        // Apply video filter (preserve blur)
+        function applyVideoFilter(filter) {
+            // Remove all filter classes EXCEPT blur
+            videoBackground.classList.remove('filter-invert', 'filter-grayscale', 'filter-sepia', 'filter-contrast', 'filter-brightness');
+            if (filter !== 'none') {
+                videoBackground.classList.add(`filter-${filter}`);
+            }
+        }
+
+        // Apply blur filter
+        function applyBlurFilter(blur) {
+            if (blur === 'on') {
+                videoBackground.classList.add('filter-blur');
+            } else {
+                videoBackground.classList.remove('filter-blur');
+            }
+        }
+
+        // Apply mask color
+        function applyMaskColor(color) {
+            const r = parseInt(color.substr(1, 2), 16);
+            const g = parseInt(color.substr(3, 2), 16);
+            const b = parseInt(color.substr(5, 2), 16);
+            colorMask.style.background = `rgba(${r}, ${g}, ${b}, 0.1)`;
+        }
+
+        // Video filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filter = button.dataset.filter;
+                applyVideoFilter(filter);
+                
+                const currentSettings = VideoSettings.load();
+                currentSettings.filter = filter;
+                VideoSettings.save(currentSettings);
+            });
+        });
+
+        // Blur buttons
+        blurButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                blurButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const blur = button.dataset.blur;
+                applyBlurFilter(blur);
+                
+                const currentSettings = VideoSettings.load();
+                currentSettings.blur = blur;
+                VideoSettings.save(currentSettings);
+            });
+        });
+
+        // Color picker functionality
+        colorPicker.addEventListener('input', (e) => {
+            const color = e.target.value;
+            applyMaskColor(color);
+            
+            const currentSettings = VideoSettings.load();
+            currentSettings.maskColor = color;
+            VideoSettings.save(currentSettings);
+        });
+
+        // Initialize settings on page load
+        function initializeSettings() {
+            applyVideoFilter(savedSettings.filter);
+            filterButtons.forEach(btn => {
+                if (btn.dataset.filter === savedSettings.filter) {
+                    btn.classList.add('active');
+                }
+            });
+
+            applyBlurFilter(savedSettings.blur);
+            blurButtons.forEach(btn => {
+                if (btn.dataset.blur === savedSettings.blur) {
+                    btn.classList.add('active');
+                }
+            });
+
+            colorPicker.value = savedSettings.maskColor;
+            applyMaskColor(savedSettings.maskColor);
+        }
+
+        // Initialize on page load
+        initializeSettings();
+
+        // Close menus when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sideMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navToggle.classList.remove('active');
+                sideMenu.classList.remove('active');
+            }
+            if (!controlPanel.contains(e.target) && !controlToggle.contains(e.target)) {
+                controlPanel.classList.remove('active');
+            }
+        });
+
+        // Add fade-in animation to resume items
+        const resumeItems = document.querySelectorAll('.resume-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in', 'visible');
+                }
+            });
+        });
+
+        resumeItems.forEach(item => {
+            item.classList.add('fade-in');
+            observer.observe(item);
+        });
+    </script>
+
+    <style>
+        /* Resume styling */
+        .resume-item ul {
+            margin-top: var(--spacing-sm);
+            padding-left: var(--spacing-lg);
+        }
+        
+        .resume-item li {
+            margin-bottom: var(--spacing-xs);
+            line-height: 1.6;
+        }
+    </style>
 </body>
 </html>
