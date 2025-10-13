@@ -3,61 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About - Maxim Van Dorn</title>
     <link href="styles.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/logo.png">
+    <meta name="description" content="Learn about Maxim Van Dorn - CS Senior passionate about ethical computing and creative problem-solving">
 </head>
 <body>
     <div class="page active">
-        <section class="showcase">
-            <header>
-                <h2 class="logo">Maxim Van Dorn</h2>
-                <button class="toggle" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </header>
-            <div class="overlay"></div>
-            <div class="text">
-                <h2>About Me</h2>
-                <p>I am a computer science major at the University of Vermont. My interests lie in areas
-                    that include ethical computing, modern/creative problem solving, and understanding as
-                    much as I can about everything.</p>
-                <a href="projects.html">Learn More</a>
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-brand">
+                <h1 class="logo">Maxim Van Dorn</h1>
+                <span class="tagline">Creative Developer</span>
             </div>
-            <div class="text">
-                <h3>What I do</h3>
-                <p>I am trying to figure out a niche as some people say. This process of finding 
-                    my creative interests has proven to be an interesting adventure. There is a lot that goes into finding 
-                    out who you want to be and who you are. I want to be able to be a good inspiration to others,
-                    and give others a reason to keep moving forward. Conveying this message without actually saying 
-                    it can be difficult though, haha.</p>
-            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
 
-        </section>
-        
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="https://github.com/brubruh" target="_blank">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/maxim-van-dorn-02795130a/" target="_blank">LinkedIn</a></li>
-            </ul>
+        <!-- Artistic Background -->
+        <div class="artistic-bg">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <div class="gradient-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
         </div>
 
-        <script>
-            const menuToggle = document.querySelector('.toggle');
-            const showcase = document.querySelector('.showcase');
+        <!-- About Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-intro">
+                    <h2 class="section-title">
+                        <span class="gradient-text">About Me</span>
+                    </h2>
+                    <p class="intro-text">
+                        I'm a Computer Science senior at the University of Vermont, driven by a passion for 
+                        ethical computing and creative problem-solving. My journey in tech is guided by the 
+                        belief that technology should serve humanity and create positive change in the world.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-            menuToggle.addEventListener('click', () => {
-                menuToggle.classList.toggle('active');
-                showcase.classList.toggle('active');
-            });
-        </script>
+        <!-- Main Content -->
+        <main class="about-content">
+            <div class="container">
+                <!-- Education Section -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3 class="section-subtitle">🎓 Education</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-info">
+                            <h4 class="degree">Bachelor of Science in Computer Science</h4>
+                            <p class="institution">University of Vermont</p>
+                            <p class="timeline">Expected Graduation: 2026</p>
+                            <div class="achievements">
+                                <h5>Key Coursework & Focus Areas:</h5>
+                                <ul class="focus-list">
+                                    <li>Data Structures & Algorithms</li>
+                                    <li>Advanced Programming</li>
+                                    <li>Database Systems</li>
+                                    <li>Human-Computer Interaction</li>
+                                    <li>Data Privacy</li>
+                                    <li>Web Development</li>
+                                    <li>Intro to AI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3 class="section-subtitle">💻 Technical Skills</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Programming Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag primary">JavaScript</span>
+                                <span class="skill-tag primary">Python</span>
+                                <span class="skill-tag secondary">Java</span>
+                                <span class="skill-tag secondary">C++</span>
+                                <span class="skill-tag secondary">HTML/CSS</span>
+                                <span class="skill-tag tertiary">SQL</span>
+                                <span class="skill-tag tertiary">Prolog</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Frameworks & Tools</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag primary">React</span>
+                                <span class="skill-tag primary">Node.js</span>
+                                <span class="skill-tag secondary">Git</span>
+                                <span class="skill-tag secondary">MongoDB</span>
+                                <span class="skill-tag tertiary">Express.js</span>
+                                <span class="skill-tag tertiary">VS Code</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Concepts & Methodologies</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag primary">Agile Development</span>
+                                <span class="skill-tag primary">UI/UX Design</span>
+                                <span class="skill-tag secondary">Database Design</span>
+                                <span class="skill-tag secondary">API Development</span>
+                                <span class="skill-tag tertiary">Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interests & Philosophy -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3 class="section-subtitle">💡 Philosophy & Interests</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="philosophy-grid">
+                        <div class="philosophy-card">
+                            <div class="philosophy-icon">⚖️</div>
+                            <h4>Ethical Computing</h4>
+                            <p>I believe technology should be developed with ethical considerations at its core. 
+                               Computing power comes with responsibility, and I'm passionate about creating 
+                               solutions that respect privacy, promote equality, and benefit society.</p>
+                        </div>
+                        <div class="philosophy-card">
+                            <div class="philosophy-icon">🎨</div>
+                            <h4>Creative Problem-Solving</h4>
+                            <p>I approach challenges with curiosity and creativity, believing that the best 
+                               solutions often come from thinking outside the box. I enjoy finding elegant 
+                               solutions to complex problems through innovative thinking.</p>
+                        </div>
+                        <div class="philosophy-card">
+                            <div class="philosophy-icon">🌱</div>
+                            <h4>Continuous Learning</h4>
+                            <p>Technology evolves rapidly, and I embrace lifelong learning. I'm always 
+                               exploring new technologies, methodologies, and ways to improve both my 
+                               technical skills and understanding of the world.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience & Goals -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3 class="section-subtitle">Experience & Goals</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Current Focus</h4>
+                                <p class="timeline-date">2022 - Present</p>
+                                <p>Completing my CS degree while working on personal projects that combine 
+                                   technical skills with creative design. Building a portfolio of work that 
+                                   demonstrates both technical competency and design sensibility.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Project Development</h4>
+                                <p class="timeline-date">2024 - Present</p>
+                                <p>Developing web applications with focus on user experience and modern design 
+                                   principles. Working on projects like the Kiau Tech website that require 
+                                   both technical implementation and creative vision.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Future Aspirations</h4>
+                                <p class="timeline-date">2025 & Beyond</p>
+                                <p>Seeking opportunities in software development where I can contribute to 
+                                   meaningful projects that make a positive impact. Interested in roles that 
+                                   combine technical development with user experience and ethical considerations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Personal Interests -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3 class="section-subtitle">Beyond Code</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <span class="interest-emoji">🌿</span>
+                            <h4>Design & Aesthetics</h4>
+                            <p>Fascinated by the intersection of technology and design, particularly how 
+                               botanical and natural elements can inspire digital interfaces.</p>
+                        </div>
+                        <div class="interest-item">
+                            <span class="interest-emoji">📚</span>
+                            <h4>Lifelong Learning</h4>
+                            <p>Always curious about new technologies, methodologies, and different perspectives 
+                               on problem-solving and creativity.</p>
+                        </div>
+                        <div class="interest-item">
+                            <span class="interest-emoji">🤝</span>
+                            <h4>Community Impact</h4>
+                            <p>Passionate about using technology to create positive change and inspire others 
+                               to pursue their goals and dreams.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <h3>Let's Connect & Create Together</h3>
+                        <p>I'm always excited to discuss new opportunities, collaborate on interesting projects, 
+                           or simply chat about technology and its potential to make the world better.</p>
+                        <div class="cta-actions">
+                            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+                            <a href="assets/Maxim_Van_Dorn_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download="Maxim_Van_Dorn_Resume.pdf">Download Resume</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Side Navigation -->
+        <div class="side-menu">
+            <div class="menu-content">
+                <nav class="menu-nav">
+                    <a href="index.html" class="menu-link">Home</a>
+                    <a href="about.html" class="menu-link active">About</a>
+                    <a href="projects.html" class="menu-link">Projects</a>
+                    <a href="assets/Maxim_Van_Dorn_Resume.pdf" class="menu-link" target="_blank" rel="noopener noreferrer">Resume</a>
+                </nav>
+                <div class="menu-social">
+                    <a href="https://github.com/brubruh" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/maxim-van-dorn-02795130a/" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="button.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/resume.js"></script>
+        <script src="function.js"></script>
     </div>
 </body>
 </html>

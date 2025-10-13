@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxim Van Dorn - Resume</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Print-specific styles */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .page { box-shadow: none !important; }
+        }
+        
+        .resume-page {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 1in;
+            background: white;
+            color: black;
+            line-height: 1.4;
+        }
+        
+        .resume-header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .resume-section {
+            margin-bottom: 25px;
+        }
+        
+        .resume-section h3 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-page">
+        <div class="no-print" style="text-align: center; margin-bottom: 20px;">
+            <button onclick="window.print()" class="btn btn-primary">Print/Save as PDF</button>
+            <a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
+        </div>
+        
+        <header class="resume-header">
+            <h1>Maxim Van Dorn</h1>
+            <p>Creative Developer | Computer Science Student</p>
+            <p>GitHub: github.com/brubruh | LinkedIn: linkedin.com/in/maxim-van-dorn-02795130a</p>
+        </header>
+        
+        <section class="resume-section">
+            <h3>Education</h3>
+            <div>
+                <strong>Bachelor of Science in Computer Science</strong><br>
+                University of Vermont | Expected Graduation: 2024<br>
+                Focus: Ethical Computing, Software Engineering, Creative Problem-Solving
+            </div>
+        </section>
+        
+        <section class="resume-section">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Programming Languages:</strong> JavaScript, Python, Java, C++, HTML/CSS</li>
+                <li><strong>Frameworks & Tools:</strong> React, Node.js, Git, MongoDB, Express.js</li>
+                <li><strong>Concepts:</strong> Agile Development, UI/UX Design, Database Design, API Development</li>
+            </ul>
+        </section>
+        
+        <section class="resume-section">
+            <h3>Projects</h3>
+            <div>
+                <strong>Kiau Tech Website</strong> | <em>In Progress</em><br>
+                Developed a creative website with botanical design elements using HTML, CSS, and JavaScript.<br><br>
+                
+                <strong>Portfolio Website</strong> | <em>Completed</em><br>
+                Built a responsive, modern portfolio showcasing technical skills and creative design sensibility.
+            </div>
+        </section>
+        
+        <section class="resume-section">
+            <h3>Philosophy & Interests</h3>
+            <p>Passionate about ethical computing and using technology to create positive change. 
+               Interested in the intersection of technology and design, with a focus on user experience 
+               and creative problem-solving approaches.</p>
+        </section>
+    </div>
+</body>
+</html>
