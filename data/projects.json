@@ -24,8 +24,8 @@
         "id": 3,
         "title": "Clash Royale API Project",
         "description": "A project that utilizes the Clash Royale API to fetch and display player statistics and game data. Built with a focus on clean design and user experience.",
-        "link": "#",
-        "image": "images/projects/clash-royale.jpg",
+        "link": "https://github.com/brubruh/Clash_Royale_Friends_Stat_Tracker",
+        "image": "images/projects/crss1.png",
         "technologies": ["HTML", "CSS", "JavaScript", "API Integration"],
         "status": "Completed",
         "featured": true
