@@ -762,8 +762,8 @@ body {
     
     .control-toggle {
         bottom: calc(var(--spacing-sm) + 5px);
-        left: 50%;
-        transform: translateX(-50%);
+        left: var(--spacing-sm);
+        transform: none;
         width: 45px;
         height: 45px;
         font-size: 1.1rem;
