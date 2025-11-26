@@ -199,13 +199,34 @@
             controlPanel.classList.toggle('active');
         });
 
+        // Generate random color for first-time visitors
+        function getRandomColor() {
+            const colors = [
+                '#FF6B6B', // Red
+                '#4ECDC4', // Teal
+                '#45B7D1', // Blue
+                '#FFA07A', // Light Salmon
+                '#98D8C8', // Mint
+                '#F7DC6F', // Yellow
+                '#BB8FCE', // Purple
+                '#85C1E2', // Sky Blue
+                '#F8B195', // Peach
+                '#6C5CE7', // Indigo
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
         // Settings persistence
         const VideoSettings = {
             load() {
+                // Check if this is a first-time visitor
+                const isFirstVisit = !localStorage.getItem('maskColor');
+                
                 return {
                     filter: localStorage.getItem('videoFilter') || 'none',
                     blur: localStorage.getItem('videoBlur') || 'off',
-                    maskColor: localStorage.getItem('maskColor') || '#ffffff'
+                    maskColor: localStorage.getItem('maskColor') || getRandomColor(),
+                    isFirstVisit: isFirstVisit
                 };
             },
             
@@ -310,6 +331,11 @@
 
             colorPicker.value = savedSettings.maskColor;
             applyMaskColor(savedSettings.maskColor);
+            
+            // Save the random color if this is a first visit
+            if (savedSettings.isFirstVisit) {
+                VideoSettings.save(savedSettings);
+            }
         }
 
         // Initialize on page load
