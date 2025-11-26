@@ -275,33 +275,52 @@
                 return;
             }
 
-            projectsGrid.innerHTML = projects.map(project => `
-                <div class="project-card fade-in">
-                    ${project.image ? `
-                        <div class="project-image">
-                            <img src="${project.image}" alt="${project.title}" onerror="this.parentElement.style.display='none'">
-                        </div>
-                    ` : ''}
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">${project.title}</h3>
-                            <span class="project-status ${project.status ? project.status.toLowerCase().replace(' ', '-') : 'unknown'}">${project.status || 'Unknown'}</span>
-                        </div>
-                        <p class="project-description">${project.description}</p>
-                        ${project.technologies ? `
-                            <div class="project-tech">
-                                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            // Create two columns for masonry layout
+            const isMobile = window.innerWidth <= 768;
+            const numColumns = isMobile ? 1 : 2;
+            
+            // Initialize columns
+            const columns = Array.from({ length: numColumns }, () => []);
+            
+            // Distribute projects across columns
+            projects.forEach((project, index) => {
+                columns[index % numColumns].push(project);
+            });
+            
+            // Create column HTML
+            const columnsHTML = columns.map(columnProjects => `
+                <div class="projects-column">
+                    ${columnProjects.map(project => `
+                        <div class="project-card fade-in">
+                            ${project.image ? `
+                                <div class="project-image">
+                                    <img src="${project.image}" alt="${project.title}" onerror="this.parentElement.style.display='none'">
+                                </div>
+                            ` : ''}
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">${project.title}</h3>
+                                    <span class="project-status ${project.status ? project.status.toLowerCase().replace(' ', '-') : 'unknown'}">${project.status || 'Unknown'}</span>
+                                </div>
+                                <p class="project-description">${project.description}</p>
+                                ${project.technologies ? `
+                                    <div class="project-tech">
+                                        ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                    </div>
+                                ` : ''}
+                                <div class="project-actions">
+                                    ${project.link && project.link !== '#' ? 
+                                        `<a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>` :
+                                        `<span class="project-link disabled">Coming Soon</span>`
+                                    }
+                                </div>
                             </div>
-                        ` : ''}
-                        <div class="project-actions">
-                            ${project.link && project.link !== '#' ? 
-                                `<a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>` :
-                                `<span class="project-link disabled">Coming Soon</span>`
-                            }
                         </div>
-                    </div>
+                    `).join('')}
                 </div>
             `).join('');
+            
+            projectsGrid.innerHTML = columnsHTML;
 
             // Add intersection observer for animations
             const cards = document.querySelectorAll('.project-card');

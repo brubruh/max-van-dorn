@@ -516,12 +516,19 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
-/* Projects Grid */
+/* Projects Grid - Masonry Style */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
+    align-items: flex-start;
+}
+
+.projects-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
 }
 
 .project-card {
@@ -727,7 +734,11 @@ body {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .projects-column {
         gap: var(--spacing-lg);
     }
     
