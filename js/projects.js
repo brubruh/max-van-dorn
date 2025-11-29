@@ -23,7 +23,7 @@ class ProjectManager {
     }
 
     renderProjects() {
-        const container = document.querySelector('.projects-container');
+        const container = document.querySelector('.projects-grid');
         if (!container) return;
 
         // Clear existing content
@@ -63,7 +63,12 @@ class ProjectManager {
         // Handle technologies
         const techHtml = project.technologies ? 
             `<div class="project-tech">
-                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                ${project.technologies.map((tech, index) => {
+                    const detail = project.technologyDetails && project.technologyDetails[index] ? 
+                        project.technologyDetails[index] : '';
+                    const escapedDetail = detail.replace(/"/g, '&quot;');
+                    return `<span class="tech-tag" data-tooltip="${escapedDetail}">${tech}<span class="tooltip-popup">${detail}</span></span>`;
+                }).join('')}
             </div>` : '';
 
         // Handle status
@@ -190,7 +195,7 @@ class ProjectManager {
 
 // Initialize project manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector('.projects-container')) {
+    if (document.querySelector('.projects-grid')) {
         window.projectManager = new ProjectManager();
     }
 });

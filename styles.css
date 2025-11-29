@@ -172,7 +172,7 @@ body {
     z-index: 1000;
     padding: var(--spacing-md) var(--spacing-lg);
     background: var(--bg-dark);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
@@ -529,14 +529,17 @@ body {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-lg);
-    overflow: hidden;
+    overflow: visible;
     transition: var(--transition);
+    position: relative;
+    z-index: 1;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: rgba(255, 255, 255, 0.2);
+    z-index: 100;
 }
 
 .project-image {
@@ -544,6 +547,7 @@ body {
     height: 200px;
     overflow: hidden;
     position: relative;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
 
 .project-image img {
@@ -579,6 +583,8 @@ body {
     flex-wrap: wrap;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-md);
+    position: relative;
+    overflow: visible;
 }
 
 .tech-tag {
@@ -588,6 +594,99 @@ body {
     font-weight: 600;
     border: 1px solid;
     transition: var(--transition);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Tooltip popup element */
+.tooltip-popup {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 999999;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    color: #ffffff;
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.6);
+    }
+}
+
+.tooltip-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #000000;
+}
+
+.tech-tag:hover .tooltip-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Tooltip styling */
+.tech-tag[data-tooltip]:not([data-tooltip=""]):hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    color: #ffffff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    white-space: nowrap;
+    z-index: 10000;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: tooltipFadeIn 0.2s ease-in-out;
+}
+
+/* Tooltip arrow */
+.tech-tag[data-tooltip]:not([data-tooltip=""]):hover::after {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    pointer-events: none;
+    animation: tooltipFadeIn 0.2s ease-in-out;
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 /* Different colors for tech tags for better readability */
@@ -601,8 +700,9 @@ body {
 .tech-tag:nth-child(8) { background: rgba(127, 255, 212, 0.2); color: #7fffd4; border-color: rgba(127, 255, 212, 0.4); }
 
 .tech-tag:hover {
-    transform: scale(1.05);
-    opacity: 0.8;
+    transform: scale(1.05) translateY(-2px);
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-link {

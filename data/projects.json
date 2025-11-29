@@ -3,30 +3,47 @@
     {
       "id": 1,
       "title": "Kiau Tech Website",
-      "description": "A website created for an up and coming company, Kiau Tech. This project required a more abstract take on websites where it was important to include a botanical design. This project is still a work in progress!",
+      "description": "A modern website for Kiau Tech, an up-and-coming company. Features a unique botanical design with an abstract twist. Still evolving!",
       "link": "https://kiau.tech",
       "image": "images/projects/kiau-tech.jpg",
       "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologyDetails": [
+        "Semantic HTML5 structure for accessibility",
+        "Classic CSS for the designs of the page",
+        "THREE.js (3D Graphics), D3.js (Node Page), GSAP (Animations)"
+      ],
       "status": "In Progress",
       "featured": true
     },
     {
       "id": 2,
       "title": "Portfolio Website",
-      "description": "A personal portfolio website showcasing my projects and skills. Built with modern web technologies and responsive design principles.",
+      "description": "A personal portfolio website showcasing my projects and skills. Built entirely with plain HTML, CSS, and JavaScript—no frameworks.",
       "link": "#",
       "image": "images/projects/portfolio.jpg",
       "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      "technologyDetails": [
+        "Clean, semantic HTML5 markup",
+        "Modern CSS with flexbox and grid",
+        "Dynamic content loading with vanilla JS",
+        "Mobile-first responsive design approach"
+      ],
       "status": "Completed",
       "featured": true
     },
     {
         "id": 3,
         "title": "Clash Royale API Project",
-        "description": "A project that utilizes the Clash Royale API to fetch and display player statistics and game data. Built with a focus on clean design and user experience.",
+        "description": "Track player stats and game data using the Clash Royale API. Clean interface that's easy for anyone to use.",
         "link": "https://github.com/brubruh/Clash_Royale_Friends_Stat_Tracker",
         "image": "images/projects/crss1.png",
         "technologies": ["HTML", "CSS", "JavaScript", "API Integration"],
+        "technologyDetails": [
+          "Structured HTML for data display",
+          "Styled with custom CSS for game aesthetics",
+          "Async JavaScript for API calls",
+          "RESTful API integration with Clash Royale"
+        ],
         "status": "Completed",
         "featured": true
     },
@@ -34,20 +51,32 @@
     {
       "id": 4,
       "title": "NBA Props Betting Tool",
-      "description": "A machine learning project that predicts NBA player performance for prop betting. Utilizes historical data and statistical analysis to provide insights.",
+      "description": "Machine learning tool that predicts NBA player performance for prop betting. Crunches historical data and stats to find edges.",
       "link": "Private Repository",
       "image": "#",
       "technologies": ["HTML", "Python", "Machine Learning", "Data Analysis"],
+      "technologyDetails": [
+        "Web interface for predictions display",
+        "Python backend with scikit-learn and pandas",
+        "Random Forest and XGBoost models",
+        "Statistical analysis of NBA player metrics"
+      ],
       "status": "In Progress",
       "featured": true
     },
     {
       "id": 5,
       "title": "Raspberry Pi NAS, Pi-hole, Cryptominer, DB, and VPN",
-      "description": "A comprehensive project that sets up a Raspberry Pi as a Network Attached Storage (NAS) device, Pi-hole for ad blocking, a cryptocurrency miner, and a VPN server. This project showcases my skills in networking and system administration.",
+      "description": "Turned a Raspberry Pi into a home server powerhouse—NAS storage, Pi-hole ad blocking, crypto mining, database, and VPN. A playground for networking and system admin.",
       "link": "#",
       "image": "images/projects/raspberry-pi.jpg",
       "technologies": ["Raspberry Pi", "Linux", "Networking", "System Administration"],
+      "technologyDetails": [
+        "Raspberry Pi 4 Model B hardware",
+        "Debian-based OS with custom services",
+        "Network configuration and VPN tunneling",
+        "Server management and automation scripts"
+      ],
       "status": "In Progress (Always)",
       "featured": true
     }

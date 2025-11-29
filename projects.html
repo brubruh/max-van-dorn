@@ -290,7 +290,11 @@
                         <p class="project-description">${project.description}</p>
                         ${project.technologies ? `
                             <div class="project-tech">
-                                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                ${project.technologies.map((tech, index) => {
+                                    const detail = project.technologyDetails && project.technologyDetails[index] ? 
+                                        project.technologyDetails[index] : '';
+                                    return `<span class="tech-tag">${tech}<span class="tooltip-popup">${detail}</span></span>`;
+                                }).join('')}
                             </div>
                         ` : ''}
                         <div class="project-actions">
