@@ -118,13 +118,34 @@
             controlPanel.classList.toggle('active');
         });
 
+        // Generate random color for first-time visitors
+        function getRandomColor() {
+            const colors = [
+                '#FF6B6B', // Red
+                '#4ECDC4', // Teal
+                '#45B7D1', // Blue
+                '#FFA07A', // Light Salmon
+                '#98D8C8', // Mint
+                '#F7DC6F', // Yellow
+                '#BB8FCE', // Purple
+                '#85C1E2', // Sky Blue
+                '#F8B195', // Peach
+                '#6C5CE7', // Indigo
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
         // Settings persistence
         const VideoSettings = {
             load() {
+                // Check if this is a first-time visitor
+                const isFirstVisit = !localStorage.getItem('maskColor');
+                
                 return {
                     filter: localStorage.getItem('videoFilter') || 'none',
                     blur: localStorage.getItem('videoBlur') || 'off',
-                    maskColor: localStorage.getItem('maskColor') || '#ffffff'
+                    maskColor: localStorage.getItem('maskColor') || getRandomColor(),
+                    isFirstVisit: isFirstVisit
                 };
             },
             
@@ -229,6 +250,11 @@
 
             colorPicker.value = savedSettings.maskColor;
             applyMaskColor(savedSettings.maskColor);
+            
+            // Save the random color if this is a first visit
+            if (savedSettings.isFirstVisit) {
+                VideoSettings.save(savedSettings);
+            }
         }
 
         // Initialize on page load
@@ -275,6 +301,7 @@
                 return;
             }
 
+<<<<<<< HEAD
             projectsGrid.innerHTML = projects.map(project => `
                 <div class="project-card fade-in">
                     ${project.image ? `
@@ -295,17 +322,54 @@
                                         project.technologyDetails[index] : '';
                                     return `<span class="tech-tag">${tech}<span class="tooltip-popup">${detail}</span></span>`;
                                 }).join('')}
+=======
+            // Create two columns for masonry layout
+            const isMobile = window.innerWidth <= 768;
+            const numColumns = isMobile ? 1 : 2;
+            
+            // Initialize columns
+            const columns = Array.from({ length: numColumns }, () => []);
+            
+            // Distribute projects across columns
+            projects.forEach((project, index) => {
+                columns[index % numColumns].push(project);
+            });
+            
+            // Create column HTML
+            const columnsHTML = columns.map(columnProjects => `
+                <div class="projects-column">
+                    ${columnProjects.map(project => `
+                        <div class="project-card fade-in">
+                            ${project.image ? `
+                                <div class="project-image">
+                                    <img src="${project.image}" alt="${project.title}" onerror="this.parentElement.style.display='none'">
+                                </div>
+                            ` : ''}
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">${project.title}</h3>
+                                    <span class="project-status ${project.status ? project.status.toLowerCase().replace(' ', '-') : 'unknown'}">${project.status || 'Unknown'}</span>
+                                </div>
+                                <p class="project-description">${project.description}</p>
+                                ${project.technologies ? `
+                                    <div class="project-tech">
+                                        ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                    </div>
+                                ` : ''}
+                                <div class="project-actions">
+                                    ${project.link && project.link !== '#' ? 
+                                        `<a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>` :
+                                        `<span class="project-link disabled">Coming Soon</span>`
+                                    }
+                                </div>
+>>>>>>> 99b01d2d0db986ef58b43f2a642cfa7312b6535d
                             </div>
-                        ` : ''}
-                        <div class="project-actions">
-                            ${project.link && project.link !== '#' ? 
-                                `<a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>` :
-                                `<span class="project-link disabled">Coming Soon</span>`
-                            }
                         </div>
-                    </div>
+                    `).join('')}
                 </div>
             `).join('');
+            
+            projectsGrid.innerHTML = columnsHTML;
 
             // Add intersection observer for animations
             const cards = document.querySelectorAll('.project-card');
