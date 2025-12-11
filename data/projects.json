@@ -16,7 +16,7 @@
       "featured": true
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "Portfolio Website",
       "description": "A personal portfolio website showcasing my projects and skills. Built entirely with plain HTML, CSS, and JavaScript—no frameworks.",
       "link": "#",
@@ -32,7 +32,23 @@
       "featured": true
     },
     {
-        "id": 3,
+      "id": 3,
+      "title": "ScrollyTelling NYC Noise - Rent Research Project",
+      "description": "An interactive scrollytelling project exploring NYC noise complaints and their correlation with rent prices. Visualizes data trends as you scroll.",
+      "link": "https://brubruh.github.io/Data_Science.github.io/",
+      "image": "#",
+      "technologies": ["HTML", "CSS", "JavaScript", "Data Visualization"],
+      "technologyDetails": [
+        "Structured HTML for content sections",
+        "Styled with CSS for visual appeal",
+        "JavaScript for scroll-triggered animations",
+        "Data visualization with D3.js and Chart.js"
+      ],
+      "status": "Completed",
+      "featured": true
+    },
+    {
+        "id": 6,
         "title": "Clash Royale API Project",
         "description": "Track player stats and game data using the Clash Royale API. Clean interface that's easy for anyone to use.",
         "link": "https://github.com/brubruh/Clash_Royale_Friends_Stat_Tracker",
@@ -65,7 +81,7 @@
       "featured": true
     },
     {
-      "id": 5,
+      "id": 2,
       "title": "Raspberry Pi NAS, Pi-hole, Cryptominer, DB, and VPN",
       "description": "Turned a Raspberry Pi into a home server powerhouse—NAS storage, Pi-hole ad blocking, crypto mining, database, and VPN. A playground for networking and system admin.",
       "link": "#",
