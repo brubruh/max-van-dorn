@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Home Server - Max Van Dorn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ascii-stars-bg"></div>
+    <nav class="navbar top-navbar">
+        <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
+        <div class="nav-content">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="interests.html" class="nav-link">Interests</a>
+        </div>
+    </nav>
+    <nav class="side-navbar" id="side-navbar">
+        <div class="side-nav-content">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="interests.html" class="nav-link">Interests</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="typewriter-border">
+            <h1 class="typewriter">Raspberry Pi Home Server</h1>
+            <p><strong>Status:</strong> In Progress (Always) &nbsp;&bull;&nbsp; <strong>Stack:</strong> Raspberry Pi &bull; Linux &bull; TimescaleDB &bull; Grafana &bull; Pi-hole &bull; Networking</p>
+
+            <h2>Overview</h2>
+            <p>A self-hosted Raspberry Pi server I built and configured entirely on my own. What started as a personal home lab has grown into production infrastructure — the server currently ingests live sensor data from a Kiau Tech environmental monitoring node deployed in New Mexico, on a 10-minute increment cycle.</p>
+            <p>One of the things I'm most proud of: it came online with almost no problems and was up and running remarkably fast for the complexity involved.</p>
+
+            <h2>What's Running</h2>
+
+            <div class="card">
+                <h3>Pi-hole</h3>
+                <p>Network-wide DNS-based ad blocker running at the router level. Filters ads and trackers for every device on the network without touching individual devices.</p>
+            </div>
+
+            <div class="card">
+                <h3>TimescaleDB</h3>
+                <p>A PostgreSQL extension optimized for time-series data. Used to store the continuous stream of sensor readings coming in from Kiau Tech field nodes. Port-forwarded and secured for external connections.</p>
+            </div>
+
+            <div class="card">
+                <h3>Custom Data Ingestion API</h3>
+                <p>A lightweight API layer that accepts packets from remote sensor nodes, validates and cleans the incoming data, strips any malformed readings, and writes clean records to TimescaleDB. Designed to handle the 10-minute ingestion cycle reliably.</p>
+            </div>
+
+            <div class="card">
+                <h3>Grafana Dashboard</h3>
+                <p>A live Grafana dashboard connected to TimescaleDB, visualizing the incoming sensor data in real time. Makes it easy to monitor trends, spot anomalies, and present data to Kiau Tech stakeholders.</p>
+            </div>
+
+            <h2>Live Data: Kiau Tech New Mexico Node</h2>
+            <p>The server is currently ingesting environmental data from a sensor node placed in New Mexico. Data arrives every 10 minutes, is cleaned by the ingestion API, stored in TimescaleDB, and rendered in Grafana. This is real, production data supporting Kiau Tech's regenerative agriculture research.</p>
+
+            <h2>Architecture at a Glance</h2>
+            <div class="card">
+                <ul class="interests-list">
+                    <li><span>Sensor Node (New Mexico)</span><span class="rating-tag">Data source</span></li>
+                    <li><span>Custom API (Raspberry Pi)</span><span class="rating-tag">Ingestion &amp; cleaning</span></li>
+                    <li><span>TimescaleDB</span><span class="rating-tag">Time-series storage</span></li>
+                    <li><span>Grafana</span><span class="rating-tag">Visualization</span></li>
+                    <li><span>Pi-hole</span><span class="rating-tag">Network-wide ad blocking</span></li>
+                    <li><span>Port Forwarding</span><span class="rating-tag">Secure external access</span></li>
+                </ul>
+            </div>
+
+            <h2>What I Learned</h2>
+            <ul>
+                <li>Setting up and hardening a Linux server from scratch</li>
+                <li>Configuring time-series databases for continuous data ingestion</li>
+                <li>Building a simple but reliable API for remote data collection</li>
+                <li>Network configuration — port forwarding, DNS, and firewall rules</li>
+                <li>Monitoring infrastructure with Grafana</li>
+                <li>The satisfaction of hardware that just works</li>
+            </ul>
+
+            <div class="cards" style="margin-top: 24px;">
+                <a href="projects.html" class="card-btn">&larr; Back to Projects</a>
+                <a href="index.html" class="card-btn">Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="typewriter.js"></script>
+    <script src="ascii-stars.js"></script>
+</body>
+</html>

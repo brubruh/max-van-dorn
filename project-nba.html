@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Props Betting Tool - Max Van Dorn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ascii-stars-bg"></div>
+    <nav class="navbar top-navbar">
+        <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
+        <div class="nav-content">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="interests.html" class="nav-link">Interests</a>
+        </div>
+    </nav>
+    <nav class="side-navbar" id="side-navbar">
+        <div class="side-nav-content">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="interests.html" class="nav-link">Interests</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="typewriter-border">
+            <h1 class="typewriter">NBA Props Betting Tool</h1>
+            <p><strong>Status:</strong> In Progress &nbsp;&bull;&nbsp; <strong>Stack:</strong> Python &bull; NBA API &bull; Machine Learning &bull; Data Analysis</p>
+            <span class="card-btn disabled">Private Repository</span>
+
+            <h2>Overview</h2>
+            <p>A personal machine learning project that pulls live and historical data from the NBA's official API, analyzes player performance against specific matchups, and compares model predictions to current betting lines — surfacing the best over/under opportunities on the market today.</p>
+
+            <h2>How It Works</h2>
+            <div class="card">
+                <h3>1. Data Ingestion</h3>
+                <p>Pulls player stats, game logs, and opponent defensive ratings directly from the NBA API. Data is cleaned and structured for analysis.</p>
+            </div>
+            <div class="card">
+                <h3>2. Matchup Analysis</h3>
+                <p>For each player prop (points, rebounds, assists, etc.), the model compares historical performance in similar matchups — factoring in the opposing team's defensive tendencies, pace, and positional matchup data.</p>
+            </div>
+            <div class="card">
+                <h3>3. Prediction</h3>
+                <p>A machine learning model generates predicted stat lines based on the historical matchup profile. These predictions are compared against the player's current market lines.</p>
+            </div>
+            <div class="card">
+                <h3>4. Line Comparison &amp; Edge Detection</h3>
+                <p>The tool scans current betting markets and flags props where the model's prediction diverges significantly from the line — highlighting potential over or under values to act on.</p>
+            </div>
+
+            <h2>Key Challenges</h2>
+            <ul>
+                <li>Cleaning and normalizing inconsistent API data across seasons</li>
+                <li>Building matchup-specific features (not just raw averages)</li>
+                <li>Keeping predictions sharp without overfitting to small sample sizes</li>
+                <li>Automating fresh predictions each day before lines move</li>
+            </ul>
+
+            <h2>Stack</h2>
+            <div class="card">
+                <ul class="interests-list">
+                    <li><span>Python</span><span class="rating-tag">Core language</span></li>
+                    <li><span>NBA API</span><span class="rating-tag">Data source</span></li>
+                    <li><span>Pandas / NumPy</span><span class="rating-tag">Data processing</span></li>
+                    <li><span>Scikit-learn</span><span class="rating-tag">ML modeling</span></li>
+                </ul>
+            </div>
+
+            <div class="cards" style="margin-top: 24px;">
+                <a href="projects.html" class="card-btn">&larr; Back to Projects</a>
+                <a href="index.html" class="card-btn">Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="typewriter.js"></script>
+    <script src="ascii-stars.js"></script>
+</body>
+</html>

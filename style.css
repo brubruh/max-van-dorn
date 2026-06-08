@@ -31,7 +31,6 @@
     font-size: 1.2vw;
     line-height: 1.1;
 }
-}
 .top-navbar, .side-navbar, .container, .cards, .card, .typewriter-border {
     position: relative;
     z-index: 200;
@@ -198,6 +197,8 @@ p {
     box-shadow: 2px 4px 16px rgba(0,0,0,0.10);
     border-bottom: 2px solid #000;
 }
+@media (min-width: 900px) {
+    .navbar {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -449,4 +450,49 @@ body {
 .card:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 4px 8px 24px rgba(0,0,0,0.10);
+}
+
+/* Interests page: rated list */
+.interests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.interests-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.interests-list li:last-child {
+    border-bottom: none;
+}
+.rating-tag {
+    background: rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.18);
+    border-radius: 4px;
+    padding: 2px 9px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+/* Project detail pages: timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 16px 0;
+}
+.timeline-item {
+    border-left: 4px solid #000;
+    border-radius: 0 8px 8px 0;
+}
+.timeline-label {
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
 }
